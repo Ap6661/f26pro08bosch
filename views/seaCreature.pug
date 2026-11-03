@@ -22,9 +22,14 @@ block content
   - var results = [ { "name": "Dumbo Octopus", "genusName": "Grimpoteuthis", "numberOfTeeth": 0, "isVertebrate": false, }, { "name": "Orca", "genusName": "Orcinus", "numberOfTeeth": 20, "isVertebrate": true, }, { "name": "Sea Lamprey", "genusName": "Petromyzon", "numberOfTeeth": 100, "isVertebrate": true, } ];
   div.container-fluid
     div.row 
-      each s in results
-        div.col-sm-2.text-center
+      each s, i in results
+        div(onClick=`buy(${i})`).col-sm-2.text-center
           span #{s.name}
           div.inner-row Genus: #{s.genusName} 
           div.inner-row Teeth: #{s.numberOfTeeth} 
           div.inner-row Vertebrate: #{s.isVertebrate}
+
+  script.
+    function buy(y) {
+      alert(`You Purchased ${y}!`)
+    }
