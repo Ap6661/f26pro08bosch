@@ -8,7 +8,7 @@
 ```mermaid
 classDiagram
     SeaCreature
-    SeaCreature : +string speciesName
+    SeaCreature : +string genusName
     SeaCreature : +int numberOfTeeth
     SeaCreature : +bool isVertebrate
 ```
